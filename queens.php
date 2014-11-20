@@ -4,11 +4,13 @@
             Reinas
         </title>
     </head>
-    <body>
+    <body background = "fondo2.png">
         <?php
         error_reporting(E_ERROR);
+        
+        //echo "<td bgcolor=" . $cellCol . "><img src='./utem4.png'></td>";
+        
         echo "<h1>Problema de las 8 Reinas</h1>";
-
 //Get the size of the board
         $boardX = $_POST['boardX'];
         $boardY = $_POST['boardX'];
@@ -179,7 +181,7 @@
                 }
                 $row = pc_next_permutation($row);
             }
-            echo "<br><br>&nbsp&nbsp&nbsp&nbspFilas/Columnas: " . $boardX . "<br>&nbsp&nbsp&nbsp&nbsp Soluciones Unicas: " . $solcount . "<br>&nbsp&nbsp&nbsp&nbspN° Soluciones Totales: " . count($solutions) . "  - Incluyendo Soluciones simetricas<br>";
+            echo "<br><br>&nbsp&nbsp&nbsp&nbspFilas/Columnas: " . $boardX . "<br>&nbsp&nbsp&nbsp&nbspSoluciones Unicas(Sin repetir): " . $solcount . "<br>&nbsp&nbsp&nbsp&nbspN°Soluciones Totales: " . count($solutions) . "  - Incluyendo Soluciones Simetricas<br>";
 //print_r($solutions);
         }
 
