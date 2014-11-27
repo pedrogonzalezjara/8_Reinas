@@ -1,0 +1,214 @@
+/* Reset */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,dfn,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+
+body{
+margin:0;
+padding:0;
+background: #000 url(../images/bg.jpg) top center no-repeat;
+font-family: Helvetica Neue, Helvetica, Arial;
+}
+
+.container{
+width: 636px;
+margin: 0 auto;
+}
+
+.header{
+width:940px;
+margin:0 auto;
+}
+
+.logo{
+width: 350px;
+display: block;
+border-left: 2px solid #3779a1;
+border-right: 2px solid #3779a1;
+border-bottom: 2px solid #3779a1;
+padding: 15px 0;
+text-decoration: none;
+font-weight: normal;
+margin: 0 auto;
+color: #fff;
+text-align: center;
+-webkit-border-radius: 0px 0px 5px 5px;
+border-radius: 0px 0px 5px 5px; 
+background: transparent;
+font-size: 42px;
+letter-spacing: -1px;
+}
+
+a.logo span{
+text-align: center;
+font-size: 11px;
+letter-spacing: 3px;
+font-weight: bold;
+text-transform: uppercase;
+}
+
+a.logo:hover{
+border-left: 2px solid #4f92b5;
+border-right: 2px solid #4f92b5;
+border-bottom: 2px solid #4f92b5;
+background: none;
+}
+
+.clear{
+clear: both;
+}
+
+.main{
+width: 58%;
+border-top: 3px solid #fff;
+border-bottom: 3px solid #fff;
+border-left: 3px solid #fff;
+border-right: 3px solid #fff;
+float: center;
+-webkit-box-shadow: 0px 0px 5px 0px #275e6a;
+box-shadow: 0px 0px 5px 0px #275e6a; 
+height: 250px;
+background: url(../images/main.jpg) center top no-repeat;
+margin:40px auto;
+}
+
+.footer{
+width: 940px;
+margin: 0 auto;
+text-align: center;
+}
+
+h1{
+font-size: 45px;
+font-weight: bold;
+color: #008242;
+margin-bottom: 15px;
+}
+
+h2{
+font-size: 40px;
+color: #008242;
+text-shadow: 1px 1px 5px #000;
+filter: dropshadow(color=#000, offx=1, offy=1); 
+}
+
+ul.social
+{
+width: 216px;
+margin: 30px auto 0;
+height: 34px;
+}
+
+ul.social li{
+float: left;
+background: url(../images/social.png) left top no-repeat;
+position: relative;
+height: 34px;
+margin-right: 2px;
+}
+
+ul.social li a{
+display: block;
+width: 34px;
+height: 34px;
+}
+
+
+ul.social li.gplus{
+height: 34px;
+background-position: 0 0;
+width: 34px;
+}
+
+ul.social li.gplus:hover{
+background-position: 0 -34px;
+}
+
+
+
+ul.social li.twitter{
+height: 34px;
+background-position: -36px 0;
+width: 34px;
+}
+
+ul.social li.twitter:hover{
+background-position: -36px -34px;
+}
+
+
+
+ul.social li.skype{
+height: 34px;
+background-position: -72px 0;
+width: 34px;
+}
+
+ul.social li.skype:hover{
+background-position: -72px -34px;
+}
+
+
+
+ul.social li.pinterest{
+height: 34px;
+background-position: -108px 0;
+width: 34px;
+}
+
+ul.social li.pinterest:hover{
+background-position: -108px -34px;
+}
+
+
+
+ul.social li.youtube{
+height: 34px;
+background-position: -144px 0;
+width: 34px;
+}
+
+ul.social li.youtube:hover{
+background-position: -144px -34px;
+}
+
+
+
+ul.social li.facebook{
+height: 34px;
+background-position: -180px 0;
+width: 34px;
+}
+
+ul.social li.facebook:hover{
+background-position: -180px -34px;
+}
+
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 2px 1px 3px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width: 200px;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+

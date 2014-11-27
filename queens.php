@@ -89,7 +89,7 @@
 
 // This is a function which will render the board
         function renderBoard($p, $boardX) {
-            echo "<table border=1 cellspacing=0 style='text-align:center;display:inline'>";
+            echo "<center><table border=10 cellspacing= style='text-align:left;display:block'>";
             for ($y = 0; $y < $boardX; ++$y) {
                 echo '<tr>';
                 for ($x = 0; $x < $boardX; ++$x) {
@@ -107,7 +107,7 @@
                 }
                 echo '<tr>';
             }
-            echo '<tr></tr></table>&nbsp';
+            echo '<tr></tr></table></center>&nbsp';
         }
 
 //This function allows me to generate the next order of rows.
