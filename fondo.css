@@ -1,0 +1,6 @@
+.miestilo {
+  background-image: url("fondo2.png");
+  background-position: top left;
+  background-repeat: no repeat;
+  background-attachment:fixed; /* este es el estilo que lo deja ahi */
+}

@@ -3,14 +3,17 @@
         <title>
             Reinas
         </title>
+        <link rel="stylesheet" type="text/css" href="fondo.css">
+        
     </head>
-    <body background = "fondo2.png">
+    
+    <body class="miestilo">
         <?php
         error_reporting(E_ERROR);
         
         //echo "<td bgcolor=" . $cellCol . "><img src='./utem4.png'></td>";
         
-        echo "<h1>Problema de las 8 Reinas</h1>";
+       
 //Get the size of the board
         $boardX = $_POST['boardX'];
         $boardY = $_POST['boardX'];
@@ -105,7 +108,7 @@
                         echo "<td bgcolor=" . $cellCol . "> </td>";
                     }
                 }
-                echo '<tr>';
+                
             }
             echo '<tr></tr></table></center>&nbsp';
         }
@@ -181,26 +184,15 @@
                 }
                 $row = pc_next_permutation($row);
             }
-            echo "<br><br>&nbsp&nbsp&nbsp&nbspFilas/Columnas: " . $boardX . "<br>&nbsp&nbsp&nbsp&nbspSoluciones Unicas(Sin repetir): " . $solcount . "<br>&nbsp&nbsp&nbsp&nbspN°Soluciones Totales: " . count($solutions) . "  - Incluyendo Soluciones Simetricas<br>";
+            echo "<br><br>&nbsp&nbsp&nbsp&nbspFilas/Columnas: " . $boardX . "<br>&nbsp&nbsp&nbsp&nbspSoluciones Unicas(Sin repetir): " . $solcount . "<br>&nbsp&nbsp&nbsp&nbspNÂ°Soluciones Totales: " . count($solutions) . "  - Incluyendo Soluciones Simetricas<br>";
 //print_r($solutions);
         }
 
 //This code collects the starting parameters
         echo <<<_END
-<form name="input" action="queens.php" method="post">
-&nbsp&nbsp&nbsp&nbspNumero de Filas y Columnas <select name="boardX" />
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4" >4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8" selected="selected">8</option>
-</select>
+<form name="input" action="select.php" method="post">
     <input type="hidden" name="process" value="yes" />
-&nbsp<input type="submit" value="Enviar" />
-</form>
+<center><input type="submit" class="btn" value="Continuar" /></center>
  
 _END;
         ?>

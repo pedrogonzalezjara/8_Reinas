@@ -10,12 +10,10 @@ font-family: Helvetica Neue, Helvetica, Arial;
 }
 
 .container{
-width: 636px;
 margin: 0 auto;
 }
 
 .header{
-width:940px;
 margin:0 auto;
 }
 
@@ -57,19 +55,6 @@ background: none;
 clear: both;
 }
 
-.main{
-width: 58%;
-border-top: 3px solid #fff;
-border-bottom: 3px solid #fff;
-border-left: 3px solid #fff;
-border-right: 3px solid #fff;
-float: center;
--webkit-box-shadow: 0px 0px 5px 0px #275e6a;
-box-shadow: 0px 0px 5px 0px #275e6a; 
-height: 250px;
-background: url(../images/main.jpg) center top no-repeat;
-margin:40px auto;
-}
 
 .footer{
 width: 940px;

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -21,11 +22,26 @@
 	<div class="logo"><img src="images/logo.jpg"></div>
 </div>
         <br></br>
-
-<div class="footer">
-	<h1>Trabajo de Ayudantía: 8 Reinas</h1>
-	<center><a href="select.php" class="btn">Ingresar</a></center>
-	
-</div>
+<form name="input" action="queens.php" method="post">
+    <div>
+         <center>Numero de Filas y Columnas <select name="boardX" /></center>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4" >4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8" selected="selected">8</option>
+</select>
+             <br></br>
+        <input type="hidden" name="process" value="yes" /><br>
+&nbsp<input type="submit" class="btn" value="Enviar" />
+    </div>
+   
+</form>
 </body>
 </html>
+
+        
+
