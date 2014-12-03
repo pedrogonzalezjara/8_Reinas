@@ -174,20 +174,38 @@
             }
 
 //Now I need to create all the possible orders of rows, will be equal to [boardY]!
+            $tableCount = 0;
             $solcount = 0;
-            $solutions = array();
-            while ($row != false) {
-                if (checkBoard($row, $boardX)) {
+            $solutions = array();?>
+       <center> <table>
+            
+                <?php while ($row != false) { ?>
+            <tr>
+                <?php
+                    $tableCount=0;
+                    while($tableCount != 3){ ?>
+                        <?php if (checkBoard($row, $boardX)) {
                     if (!in_array($row, $solutions)) {
-                        $solutions[] = $row;
-                        renderBoard($row, $boardX);
-                        $solutions = findRotation($row, $boardX, $solutions);
+                        $solutions[] = $row;?>
+            <td>
+                        <?php renderBoard($row, $boardX);echo"<br>";?>
+            </td> 
+                        
+                        <?php $solutions = findRotation($row, $boardX, $solutions);
                         ++$solcount;
+                        $tableCount++;
                     }
                 }
                 $row = pc_next_permutation($row);
-            }
-            echo "<center><br><br>Filas/Columnas: " . $boardX . "<br>Soluciones Unicas(Sin repetir): " . $solcount . "<br>N°Soluciones Totales: " . count($solutions) . "  - Incluyendo Soluciones Simetricas<br></center><br>";
+                if($row == FALSE) {break;}?>
+                    <?php 
+                    
+                    }?>
+            </tr>
+                <?php }?>
+            
+        </table></center>
+            <?php echo "<center><br><br>Filas/Columnas: " . $boardX . "<br>Soluciones Unicas(Sin repetir): " . $solcount . "<br>Soluciones Totales: " . count($solutions) . "  - Incluyendo Soluciones Simetricas<br></center><br>";
 //print_r($solutions);
         }
 
