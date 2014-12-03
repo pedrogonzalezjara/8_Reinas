@@ -36,7 +36,7 @@
 </select>
              <br></br>
         <input type="hidden" name="process" value="yes" /><br>
-&nbsp<input type="submit" class="btn" value="Enviar" />
+    <input type="submit" class="btn" value="Enviar" />
     </div>
    
 </form>
