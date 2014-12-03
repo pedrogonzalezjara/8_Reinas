@@ -4,16 +4,19 @@
             Reinas
         </title>
         <link rel="stylesheet" type="text/css" href="fondo.css">
-        
+        <link href="tools/style.css" rel="stylesheet" type="text/css" />
     </head>
+    <div class="footer">
+        <h1>Resultados : </h1>
+	
+</div>
     
     <body class="miestilo">
         <?php
         error_reporting(E_ERROR);
         
         //echo "<td bgcolor=" . $cellCol . "><img src='./utem4.png'></td>";
-        
-       
+
 //Get the size of the board
         $boardX = $_POST['boardX'];
         $boardY = $_POST['boardX'];
@@ -184,7 +187,7 @@
                 }
                 $row = pc_next_permutation($row);
             }
-            echo "<br><br>&nbsp&nbsp&nbsp&nbspFilas/Columnas: " . $boardX . "<br>&nbsp&nbsp&nbsp&nbspSoluciones Unicas(Sin repetir): " . $solcount . "<br>&nbsp&nbsp&nbsp&nbspN°Soluciones Totales: " . count($solutions) . "  - Incluyendo Soluciones Simetricas<br>";
+            echo "<center><br><br>Filas/Columnas: " . $boardX . "<br>Soluciones Unicas(Sin repetir): " . $solcount . "<br>N°Soluciones Totales: " . count($solutions) . "  - Incluyendo Soluciones Simetricas<br></center><br>";
 //print_r($solutions);
         }
 

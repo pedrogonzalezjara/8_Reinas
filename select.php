@@ -23,8 +23,13 @@
 </div>
         <br></br>
 <form name="input" action="queens.php" method="post">
+    <div class="footer">
+	<h1>Seleccione Numero de Reinas </h1>
+        <center>Numero de Filas y Columnas <select name="boardX" /></center>
+	
+</div>
     <div>
-         <center>Numero de Filas y Columnas <select name="boardX" /></center>
+         
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
