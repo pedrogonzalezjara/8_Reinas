@@ -115,7 +115,7 @@
 //Esta funcion permite generar el siguiente orden de filas
         function pc_next_permutation($p) {
             $size = count($p) - 1;
-//Se desliza por la matriz buscando el siguien mas pequeño
+//Se desliza por la matriz buscando el siguiente mas pequeño
             for ($i = $size - 1; $p[$i] >= $p[$i + 1]; --$i) {
                 
             }
@@ -143,7 +143,7 @@
             return $p;
         }
 
-//Esta fucnion chuque las filas para ver si falta alguna
+//Esta funcion chequea las filas para ver si falta alguna
         function checkBoard($p, $boardX) {
             $a = 0; //esta es la fila que esta siendo chequeada
             while ($a < count($p)) {
@@ -162,7 +162,7 @@
         }
 
         if (isset($_POST['process']) && isset($_POST['boardX'])) {
-//Dentro de aquí está el código que se ejecutará al hacer click.
+//Dentro de este IF está el código que se ejecutará al hacer click en enviar.
 //Primero se crean las diferentes filas posibles
             for ($x = 0; $x < $boardX; ++$x) {
                 $row[$x] = 1 << $x;
@@ -201,18 +201,19 @@
             
         </table></center>
 
-            <?php echo "<center><br><br>Filas/Columnas: " . $boardX . "<br>Soluciones Unicas(Sin repetir): " . $solcount . "<br>Soluciones Totales: " . count($solutions) . "  - Incluyendo Soluciones Simetricas<br></center><br>";
+            <?php echo  "<center><strong><br>Soluciones Unicas(Sin repetir): " . $solcount . "<br>Soluciones Totales: " . count($solutions) . "  - Incluyendo Soluciones Simetricas<br></strong></center><br>";
 //se imprimen las soluciones
         }
 //Este codigo recolecta los parametros iniciales
         echo <<<_END
 
-        <form name="input" action="select.php" method="post">
-            <input type="hidden" name="process" value="yes" />
-        <center><input type="submit" class="btn" value="Volver" /></center>
+        
  
 _END;
         ?>
+    <form name="input" action="select.php" method="post">
+            <input type="hidden" name="process" value="yes" />
+        <center><input type="submit" class="btn" value="Volver" /></center>
         <br><br>
     </body>
 </html>

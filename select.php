@@ -25,7 +25,7 @@
     <form name="input" action="queens.php" method="post">
         <div class="footer">
     	   <h1>Seleccione Numero de Reinas </h1>
-           <center><h4 style="color:#08298A"><b>Numero de Filas y Columnas</b><select name="boardX" /></center></h4>    	
+           <center><h4 style="color:#08298A"><b>Opción </b><select name="boardX" /></center></h4>    	
         </div>
         <div>         
             <option value="1">1</option>
@@ -41,7 +41,7 @@
             <input type="hidden" name="process" value="yes" /><br>
             <input type="submit" class="btn" value="Enviar" />
             <br><br>
-            <center><a href="index.php" class="btn btn-sm">Ir al Inicio</a></center>
+            <center><a href="index.php" class="btn btn-sm">Ir a Inicio</a></center>
         </div>   
     </form>
 </body>

@@ -30,7 +30,7 @@
 </div>
 <br><br><br><br><br><br><br>
 <div class="footer">
-		 <h3 style="color:#0B0B61"><b><ul>Integrantes:<br>Pedro Gonzalez Jara<br>Neftali Madariaga Castro<br>Juan Pablo Sepulveda Angerstein<h3></b><br></center><br>
+		 <h3 style="color:#000"><b><ul>Integrantes:<br>Pedro González Jara<br>Neftali Madariaga Castro<br>Juan Pablo Sepulveda Angerstein<h3></b><br></center><br>
 </div>
 
 </body>
