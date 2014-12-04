@@ -106,7 +106,7 @@
                     }
 
                     if ($p[$y] == 1 << $x) {
-                        echo "<td bgcolor=" . $cellCol . "><img  src='./reina.png'></td>";
+                        echo "<td bgcolor=" . $cellCol . "><img width=30 height=30 src='./reina.png'></td>";
                     } else {
                         echo "<td bgcolor=" . $cellCol . "> </td>";
                     }
