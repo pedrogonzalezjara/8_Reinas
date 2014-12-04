@@ -17,34 +17,33 @@
 </script>
 <link rel="stylesheet" type="text/css" href="fondo.css"/>
 </head>
-    <body class="miestilo">
-<div class="header">
-	<div class="logo"><img src="images/logo.jpg"></div>
-</div>
-        <br></br>
-<form name="input" action="queens.php" method="post">
-    <div class="footer">
-	<h1>Seleccione Numero de Reinas </h1>
-        <center>Numero de Filas y Columnas <select name="boardX" /></center>
-	
-</div>
-    <div>
-         
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4" >4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8" selected="selected">8</option>
-</select>
-             <br></br>
-        <input type="hidden" name="process" value="yes" /><br>
-    <input type="submit" class="btn" value="Enviar" />
+<body class="miestilo">
+    <div class="header">
+    	<div class="logo"><img src="images/logo.jpg"></div>
     </div>
-   
-</form>
+            <br></br>
+    <form name="input" action="queens.php" method="post">
+        <div class="footer">
+    	   <h1>Seleccione Numero de Reinas </h1>
+           <center><h4 style="color:#08298A"><b>Numero de Filas y Columnas</b><select name="boardX" /></center></h4>    	
+        </div>
+        <div>         
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" >4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8" selected="selected">8</option>
+            </select>
+                 <br></br>
+            <input type="hidden" name="process" value="yes" /><br>
+            <input type="submit" class="btn" value="Enviar" />
+            <br><br>
+            <center><a href="index.php" class="btn btn-sm">Ir al Inicio</a></center>
+        </div>   
+    </form>
 </body>
 </html>
 
