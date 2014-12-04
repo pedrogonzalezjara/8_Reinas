@@ -4,24 +4,20 @@
             Reinas
         </title>
         <link rel="stylesheet" type="text/css" href="fondo.css">
-        <link href="tools/style.css" rel="stylesheet" type="text/css" />
+        <link href="tools/style.css" rel="stylesheet" type="text/css" >
     </head>
     <div class="footer">
-        <h1>Resultados : </h1>
-	
-</div>
-    
+        <h1>Resultados:</h1>	
+    </div>    
     <body class="miestilo">
         <?php
         error_reporting(E_ERROR);
-        
-        //echo "<td bgcolor=" . $cellCol . "><img src='./utem4.png'></td>";
 
-//Get the size of the board
+//Se obtiene el tamaño de la tabla de ajedrez
         $boardX = $_POST['boardX'];
         $boardY = $_POST['boardX'];
 
-// Function to rotate a board 90 degrees
+//Funcion que rota la tabla en 90 grados.
         function rotateBoard($p, $boardX) {
             $a = 0;
             while ($a < count($p)) {
@@ -33,10 +29,10 @@
             return $tmp;
         }
 
-// This function will find rotations of a solution
-        function findRotation($p, $boardX, $solutions) {
+//Esta funcion econtrara las rotaciones de una solucion
+         function findRotation($p, $boardX, $solutions) {
             $tmp = rotateBoard($p, $boardX);
-// Rotated 90
+//Tablero rotado 90
             if (in_array($tmp, $solutions)) {
                 
             } else {
@@ -44,7 +40,7 @@
             }
 
             $tmp = rotateBoard($tmp, $boardX);
-// Rotated 180
+//Tablero rotado 180
             if (in_array($tmp, $solutions)) {
                 
             } else {
@@ -52,14 +48,14 @@
             }
 
             $tmp = rotateBoard($tmp, $boardX);
-// Rotated 270
+//Tablero rotado 270
             if (in_array($tmp, $solutions)) {
                 
             } else {
                 $solutions[] = $tmp;
             }
 
-// Reflected
+//Tablero Reflejado
             $tmp = array_reverse($p);
             if (in_array($tmp, $solutions)) {
                 
@@ -68,7 +64,7 @@
             }
 
             $tmp = rotateBoard($tmp, $boardX);
-// Reflected and Rotated 90
+//Tablero Reflejado  y rotado 90 grados
             if (in_array($tmp, $solutions)) {
                 
             } else {
@@ -76,7 +72,7 @@
             }
 
             $tmp = rotateBoard($tmp, $boardX);
-// Reflected and Rotated 180
+//Tablero Reflejado y rotado 180 grados
             if (in_array($tmp, $solutions)) {
                 
             } else {
@@ -84,7 +80,7 @@
             }
 
             $tmp = rotateBoard($tmp, $boardX);
-// Reflected and Rotated 270
+//Tablero Reflejado y rotado 270 grados
             if (in_array($tmp, $solutions)) {
                 
             } else {
@@ -93,7 +89,7 @@
             return $solutions;
         }
 
-// This is a function which will render the board
+//Esta funcion es la que genera el tablero
         function renderBoard($p, $boardX) {
             echo "<center><table border=10 cellspacing= style='text-align:left;display:block'>";
             for ($y = 0; $y < $boardX; ++$y) {
@@ -116,30 +112,29 @@
             echo '<tr></tr></table></center>&nbsp';
         }
 
-//This function allows me to generate the next order of rows.
+//Esta funcion permite generar el siguiente orden de filas
         function pc_next_permutation($p) {
             $size = count($p) - 1;
-// slide down the array looking for where we're smaller than the next guy 
-
+//Se desliza por la matriz buscando el siguien mas pequeño
             for ($i = $size - 1; $p[$i] >= $p[$i + 1]; --$i) {
                 
             }
 
-// if this doesn't occur, we've finished our permutations 
-// the array is reversed: (1, 2, 3, 4) => (4, 3, 2, 1) 
+//Si esto no ocurre se termina con las permutaciones 
+//Se revierte el arreglo: (1, 2, 3, 4) => (4, 3, 2, 1) 
             if ($i == -1) {
                 return false;
             }
 
-// slide down the array looking for a bigger number than what we found before 
+//Se desplaza por la matriz en busqueda de un valor mas grande que el anterior
             for ($j = $size; $p[$j] <= $p[$i]; --$j) {
                 
             }
-// swap them 
+//Se intercambian 
             $tmp = $p[$i];
             $p[$i] = $p[$j];
             $p[$j] = $tmp;
-// now reverse the elements in between by swapping the ends 
+//Intercambiar los elementos del medio por los del final 
             for (++$i, $j = $size; $i < $j; ++$i, --$j) {
                 $tmp = $p[$i];
                 $p[$i] = $p[$j];
@@ -148,9 +143,9 @@
             return $p;
         }
 
-//This function needs to check the current state to see if there are any 
+//Esta fucnion chuque las filas para ver si falta alguna
         function checkBoard($p, $boardX) {
-            $a = 0; //this is the row being checked
+            $a = 0; //esta es la fila que esta siendo chequeada
             while ($a < count($p)) {
                 $b = 1;
                 while ($b < ($boardX - $a)) {
@@ -167,13 +162,13 @@
         }
 
         if (isset($_POST['process']) && isset($_POST['boardX'])) {
-//Within here is the code that needs to be run if process is clicked.
-//First I need to create the different possible rows
+//Dentro de aquí está el código que se ejecutará al hacer click.
+//Primero se crean las diferentes filas posibles
             for ($x = 0; $x < $boardX; ++$x) {
                 $row[$x] = 1 << $x;
             }
 
-//Now I need to create all the possible orders of rows, will be equal to [boardY]!
+//Ahora se necesitan crear los posibles ordenes de filas, será igual al [boardY]!
             $tableCount = 0;
             $solcount = 0;
             $solutions = array();?>
@@ -205,17 +200,19 @@
                 <?php }?>
             
         </table></center>
-            <?php echo "<center><br><br>Filas/Columnas: " . $boardX . "<br>Soluciones Unicas(Sin repetir): " . $solcount . "<br>Soluciones Totales: " . count($solutions) . "  - Incluyendo Soluciones Simetricas<br></center><br>";
-//print_r($solutions);
-        }
 
-//This code collects the starting parameters
+            <?php echo "<center><br><br>Filas/Columnas: " . $boardX . "<br>Soluciones Unicas(Sin repetir): " . $solcount . "<br>Soluciones Totales: " . count($solutions) . "  - Incluyendo Soluciones Simetricas<br></center><br>";
+//se imprimen las soluciones
+        }
+//Este codigo recolecta los parametros iniciales
         echo <<<_END
-<form name="input" action="select.php" method="post">
-    <input type="hidden" name="process" value="yes" />
-<center><input type="submit" class="btn" value="Continuar" /></center>
+
+        <form name="input" action="select.php" method="post">
+            <input type="hidden" name="process" value="yes" />
+        <center><input type="submit" class="btn" value="Volver" /></center>
  
 _END;
         ?>
+        <br><br>
     </body>
 </html>

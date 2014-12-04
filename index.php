@@ -23,9 +23,15 @@
         <br></br>
 
 <div class="footer">
-	<h1>Trabajo de Ayudantía: 8 Reinas</h1>
-	<center><a href="select.php" class="btn">Ingresar</a></center>
-	
+	<h1>Análisis de Algoritmos</h1>
+	<h2>Trabajo de Ayudantía: 8 Reinas</h2>
+	<br></br>
+	<center><a href="select.php" class="btn">Ingresar</a></center>	
 </div>
+<br><br><br><br><br><br><br>
+<div class="footer">
+		 <h3 style="color:#0B0B61"><b><ul>Integrantes:<br>Pedro Gonzalez Jara<br>Neftali Madariaga Castro<br>Juan Pablo Sepulveda Angerstein<h3></b><br></center><br>
+</div>
+
 </body>
 </html>
